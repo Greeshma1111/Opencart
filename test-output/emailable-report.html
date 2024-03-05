@@ -9,16 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,575,151</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">16,302</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.Tc_003_loginDDT</td><td><a href="#m0">test_loginddt</a></td><td rowspan="1">1709362907441</td><td rowspan="1">1565153</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testCases.Tc_003_loginDDT</td><td><a href="#m0">test_loginddt</a></td><td rowspan="1">1709531820786</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.Tc_002_logintest</td><td><a href="#m1">logintest</a></td><td rowspan="1">1709531812897</td><td rowspan="1">2983</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testCases.Tc_003_loginDDT#test_loginddt</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
-[public void testCases.Tc_003_loginDDT.test_loginddt(java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: test_loginddt([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) akhilsadineni99@gmail.com,(java.lang.String) akhil@123S,(java.lang.String) Valid,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ]
+<h2>Test</h2><h3 id="m0">testCases.Tc_003_loginDDT#test_loginddt</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Caused by: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at utilities.ExcelUtility.getRowCount(ExcelUtility.java:37)
+	at utilities.DataProviders.getData(DataProviders.java:14)
+	... 25 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.Tc_002_logintest#logintest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

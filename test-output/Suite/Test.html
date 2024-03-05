@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Mar 02 12:31:37 IST 2024</td>
+<td>Started on:</td><td>Mon Mar 04 11:26:44 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1575 seconds (1575151 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16302 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,21 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.Tc_002_logintest.logintest()'><b>logintest</b><br>Test class: testCases.Tc_002_logintest</td>
+<td></td>
+<td>2</td>
+<td>testCases.Tc_002_logintest@245b4bdc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,22 +89,25 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testCases.Tc_003_loginDDT.test_loginddt()'><b>test_loginddt</b><br>Test class: testCases.Tc_003_loginDDT</td>
-<td><div><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void testCases.Tc_003_loginDDT.test_loginddt(java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: test_loginddt([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) akhilsadineni99@gmail.com,(java.lang.String) akhil@123S,(java.lang.String) Valid,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ]
+<td><div><pre>java.lang.RuntimeException: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace574372464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace574372464'><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void testCases.Tc_003_loginDDT.test_loginddt(java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: test_loginddt([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) akhilsadineni99@gmail.com,(java.lang.String) akhil@123S,(java.lang.String) Valid,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+Caused by: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at utilities.ExcelUtility.getRowCount(ExcelUtility.java:37)
+	at utilities.DataProviders.getData(DataProviders.java:14)
+	... 25 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1979455890", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1979455890'><pre>java.lang.RuntimeException: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -111,9 +127,24 @@ Arguments: [(java.lang.String) akhilsadineni99@gmail.com,(java.lang.String) akhi
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.FileNotFoundException: .\test data\Book2.xlsx (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at utilities.ExcelUtility.getRowCount(ExcelUtility.java:37)
+	at utilities.DataProviders.getData(DataProviders.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+	... 25 more
 </pre></div></td>
-<td>1565</td>
-<td>testCases.Tc_003_loginDDT@2a798d51</td></tr>
+<td>0</td>
+<td>testCases.Tc_003_loginDDT@2d7275fc</td></tr>
 </table><p>
 </body>
 </html>

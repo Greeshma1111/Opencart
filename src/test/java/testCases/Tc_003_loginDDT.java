@@ -17,11 +17,9 @@ public class Tc_003_loginDDT extends BaseClass
 	{
 		logger.info("Starting TC_003_LoginDataDrivenTest  ...");
 		try {
-		HomePage hp=new HomePage(driver);
-		
-		hp.clickmyaccount();
-		hp.clicklogin();
-		
+			HomePage hp=new HomePage(driver);
+			hp.clickmyaccount();
+			hp.clicklogin();
 		Loginpage lp=new Loginpage(driver);
 		
 		lp.setemail(email);
@@ -67,5 +65,4 @@ public class Tc_003_loginDDT extends BaseClass
 			
 		
 	}
-
 }
